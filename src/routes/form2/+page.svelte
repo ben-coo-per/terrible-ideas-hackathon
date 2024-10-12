@@ -48,12 +48,12 @@
 		minlength="5"
 		title="Please enter a valid state"
 	/>
-	<label for="zip" class="-mt-4 font-mono text-lg">Zip</label>
+	<label for="zip" class="-mt-4 font-mono text-lg">Postal Code</label>
 	<input
 		type="text"
 		id="zip"
 		class="rounded-sm border-2 border-red-500 p-2"
-		placeholder="Zip"
+		placeholder="Postal Code"
 		required
 		maxlength="100"
 		minlength="5"
@@ -70,18 +70,7 @@
 		minlength="5"
 		title="Please enter a valid phone number"
 	/>
-	<label for="ssn" class="-mt-4 font-mono text-lg">SSN</label>
-	<input
-		type="text"
-		id="ssn"
-		class="rounded-sm border-2 border-red-500 p-2"
-		placeholder="SSN"
-		required
-		maxlength="100"
-		minlength="5"
-		title="Please enter a valid SSN"
-	/>
-	<label for="dob" class="-mt-4 font-mono text-lg">DOB</label>
+	<label for="dob" class="-mt-4 font-mono text-lg">Birthday Confirmation</label>
 	<input
 		type="date"
 		id="dob"

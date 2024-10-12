@@ -70,15 +70,6 @@
 				bind:value={phone}
 			/>
 
-			<label for="ssn" class="-my-4 font-mono text-lg">SSN</label>
-			<input
-				type="text"
-				name="ssn"
-				class="mb-4 rounded-sm border-2 border-red-500 p-2"
-				placeholder="SSN"
-				bind:value={ssn}
-			/>
-
 			<label for="dob" class="-my-4 font-mono text-lg">DOB</label>
 			<input
 				type="date"
@@ -101,7 +92,7 @@
 		>
 		<button
 			class="rounded-sm border-2 border-red-500 p-2 text-center font-mono text-white disabled:opacity-50"
-			onclick={() => goto('/loading?path=/form3')}
+			onclick={() => goto('/loading?path=/code')}
 			disabled={contacts.length === 0}>Next</button
 		>
 	</div>
