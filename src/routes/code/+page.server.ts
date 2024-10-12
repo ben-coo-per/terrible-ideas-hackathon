@@ -10,22 +10,12 @@ export async function load() {
 		await pb.collection('codes').create({
 			code: codeString
 		});
+		console.log('saved code:  ', codeString);
 
 		return {
 			codeString
 		};
 	} catch (e) {
-		try {
-			// save the code to the database
-			await pb.collection('codes').create({
-				code: codeString
-			});
-
-			return {
-				codeString
-			};
-		} catch (e) {
-			console.log(e);
-		}
+		console.log('error');
 	}
 }
