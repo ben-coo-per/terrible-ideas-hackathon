@@ -37,11 +37,19 @@
 	<div class="mt-10 flex w-full flex-col gap-4 text-center">
 		{#if codeString}
 			<p>Type in the code below to get started.</p>
-			<div class="flex w-full flex-row justify-center gap-2">
+			<div class="flex w-full flex-row justify-center gap-2 text-black">
 				{#each codeString?.split('') as codeCharacter}
-					<span class="rounded-lg bg-slate-800 p-4 px-8 text-center font-mono text-4xl"
-						>{codeCharacter}</span
-					>
+					{#if codeCharacter === '0'}
+						<div
+							class="h-16 rounded-lg bg-yellow-400 p-4 px-8 text-center font-mono text-4xl"
+						></div>
+					{:else if codeCharacter === '1'}
+						<div class="rounded-lg bg-green-400 p-4 px-8 text-center font-mono text-4xl"></div>
+					{:else if codeCharacter === '2'}
+						<div class="rounded-lg bg-blue-400 p-4 px-8 text-center font-mono text-4xl"></div>
+					{:else if codeCharacter === '3'}
+						<div class="rounded-lg bg-red-400 p-4 px-8 text-center font-mono text-4xl"></div>
+					{/if}
 				{/each}
 			</div>
 		{:else}
