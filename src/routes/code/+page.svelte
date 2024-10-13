@@ -5,10 +5,16 @@
 
 	let codeString: string;
 
+	function createCode() {
+		// randomly generate a 4 digit code that only uses the number 0, 1, 2, and 3
+		const [dig1, dig2, dig3, dig4] = [0, 1, 2, 3].map((x) => Math.floor(Math.random() * 4));
+		return `${dig1}${dig2}${dig3}${dig4}`;
+	}
+
 	onMount(async () => {
 		const pb = await getPBClient();
 		// randomly generate a 4 digit code
-		const codeStringToSend = Math.floor(Math.random() * 10000).toString();
+		const codeStringToSend = createCode();
 
 		try {
 			// save the code to the database
